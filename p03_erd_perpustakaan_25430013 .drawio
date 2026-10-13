@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="perpus-p03" name="ERD Perpustakaan">
+    <mxGraphModel dx="1157" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEAF7;strokeColor=#334155;fontColor=#172033;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;" value="&lt;b&gt;anggota&lt;/b&gt;&lt;br&gt;&lt;b&gt;PK&lt;/b&gt; id_anggota&lt;br&gt;&lt;b&gt;AK&lt;/b&gt; nim&lt;br&gt;nama&lt;br&gt;prodi&lt;br&gt;no_hp&lt;br&gt;alamat" vertex="1">
+          <mxGeometry height="190" width="270" x="60" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7E0F7;strokeColor=#334155;fontColor=#172033;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;" value="&lt;b&gt;buku&lt;/b&gt;&lt;br&gt;&lt;b&gt;PK&lt;/b&gt; id_buku&lt;br&gt;judul&lt;br&gt;penulis&lt;br&gt;penerbit&lt;br&gt;tahun_terbit&lt;br&gt;stok" vertex="1">
+          <mxGeometry height="190" width="270" x="400" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F1E5;strokeColor=#334155;fontColor=#172033;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;" value="&lt;b&gt;petugas&lt;/b&gt;&lt;br&gt;&lt;b&gt;PK&lt;/b&gt; id_petugas&lt;br&gt;nama_petugas&lt;br&gt;&lt;b&gt;AK&lt;/b&gt; username&lt;br&gt;no_hp" vertex="1">
+          <mxGeometry height="155" width="270" x="850" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBE8D5;strokeColor=#334155;fontColor=#172033;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;" value="&lt;b&gt;peminjaman&lt;/b&gt;&lt;br&gt;&lt;b&gt;PK&lt;/b&gt; id_peminjaman&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_anggota&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_buku&lt;br&gt;tanggal_pinjam&lt;br&gt;tanggal_jatuh_tempo&lt;br&gt;status" vertex="1">
+          <mxGeometry height="205" width="270" x="60" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCEFEF;strokeColor=#334155;fontColor=#172033;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;" value="&lt;b&gt;pengembalian&lt;/b&gt;&lt;br&gt;&lt;b&gt;PK&lt;/b&gt; id_pengembalian&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_peminjaman&lt;br&gt;tanggal_kembali&lt;br&gt;kondisi_buku" vertex="1">
+          <mxGeometry height="175" width="270" x="400" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4DFE9;strokeColor=#334155;fontColor=#172033;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=13;" value="&lt;b&gt;denda&lt;/b&gt;&lt;br&gt;&lt;b&gt;PK&lt;/b&gt; id_denda&lt;br&gt;&lt;b&gt;FK&lt;/b&gt; id_peminjaman&lt;br&gt;jumlah_denda&lt;br&gt;status_bayar" vertex="1">
+          <mxGeometry height="155" width="270" x="850" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontColor=#17324D;" value="&lt;b&gt;ERD Sistem Informasi Perpustakaan&lt;/b&gt;&lt;br&gt;Nama: Devita Sari | NPM: 25430013" vertex="1">
+          <mxGeometry height="70" width="650" x="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;startArrow=ERone;endFill=0;strokeColor=#334155;fontSize=12;labelBackgroundColor=#FFFFFF;" target="5" value="1 : 0..N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;startArrow=ERone;endFill=0;strokeColor=#334155;fontSize=12;labelBackgroundColor=#FFFFFF;" target="5" value="1 : 0..N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;startArrow=ERone;endFill=0;strokeColor=#334155;fontSize=12;labelBackgroundColor=#FFFFFF;" target="6" value="1 : 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERone;startArrow=ERone;endFill=0;strokeColor=#334155;fontSize=12;labelBackgroundColor=#FFFFFF;" target="7" value="1 : 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontColor=#172033;fontSize=12;" value="Legenda: PK = Primary Key | FK = Foreign Key | AK = Alternate Key&lt;br&gt;Kardinalitas: 1 = tepat satu | 0..1 = nol atau satu | 0..N = nol atau banyak&lt;br&gt;Catatan: hubungan petugas serta aturan denda perlu dicocokkan dengan kebutuhan data Modul 2." vertex="1">
+          <mxGeometry height="80" width="900" x="60" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="PpTpnOTPA3CGLTOnFEC9-32" parent="1" style="shape=stencil(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);lineShape=1;strokeColor=default;" value="" vertex="1">
+          <mxGeometry height="79.28300524571833" width="77.58590490705978" x="130.09934504480952" y="788.0662960772179" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
