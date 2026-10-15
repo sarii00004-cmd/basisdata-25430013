@@ -273,7 +273,7 @@ Kamus data awal tersebut memiliki lebih dari 20 elemen dan setiap elemen mempuny
 1. Dua digit terakhir NIM: 13
 
 Perhitungan parameter P:
-P = (47 mod 9) + 1
+P = (13 mod 9) + 1
 P = 2 + 1
 P = 3
 Jadi:
